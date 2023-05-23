@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/assets/css/style.css">
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <title>Standardcoinoption | About</title>
+    <style>
+      body{
+        background-color: black;
+        color: whitesmoke;
+      }
+    </style>
+</head>
+<body>
+    {% include "nav.html" %}
+
+
+    <section class="hero is-medium">
+
+
+      <div class="hero-body">
+
+
+        <div class="container">
+            <div class="columns">
+                <div class="column">
+                    <img  src="static/assets/imgs/illu/hero.svg" alt="" srcset="">
+
+                </div>
+
+                <div class="column">
+                    <div class="textcontainer">
+                        <!-- <svg viewbox="0 0 100 20">
+                            <defs>
+                              <linearGradient id="gradient">
+                                <stop color="#000"/>
+                              </linearGradient>
+                              <pattern id="wave" x="0" y="-0.5" width="100%" height="100%" patternUnits="userSpaceOnUse">
+                                <path id="wavePath" d="M-40 9 Q-30 7 -20 9 T0 9 T20 9 T40 9 T60 9 T80 9 T100 9 T120 9 V20 H-40z" mask="url(#mask)" fill="url(#gradient)"> 
+                                  <animateTransform
+                                      attributeName="transform"
+                                      begin="0s"
+                                      dur="1.5s"
+                                      type="translate"
+                                      from="0,0"
+                                      to="40,0"
+                                      repeatCount="indefinite" />
+                                </path>
+                              </pattern>
+                            </defs>
+                            <text text-anchor="middle" x="50" y="20" font-size="8" fill="white" fill-opacity="0.1">247cryptocurrency</text>
+                            <text text-anchor="middle" x="50" y="20" font-size="8" fill="url(#wave)"  fill-opacity="1">247cryptocurrency</text>
+                          </svg> -->
+                          
+                    </div>
+                        <br>
+                        
+                    <h1 style="color: goldenrod;" class="title">
+                        What is Standardcoinoption
+                      </h1>
+                      <p class="subtitle" style="color: whitesmoke;">
+                        Standardcoinoption is an advanced Trading platform based in the UK. It was established 2016. We are strictly into trading, mining with lots of paid adverts. Our vision is to build a strong alliance and everlasting partnership with our traders , also leading them to financial independence.
+                      </p>
+                      <br>
+                      <h1 style="color: goldenrod; font-size: 25px;" class="title">
+                        About Standardcoinoption
+                      </h1>
+
+                      <p style="color: whitesmoke;" class="subtitle">
+                        Standardcoinoption - Bitcoin & Ethereum Cryptocurrency Trading Platform - is an officially registered, legitimate company. You can check the number of service license to verify the legality of the services we provide.
+                      </p>
+                </div>
+            </div>
+          
+        </div>
+      </div>
+    </section>
+
+    {% include "chat.html" %}
+
+<script>
+  document.addEventListener('DOMContentLoaded',function(event){
+  // array with texts to type in typewriter
+  var dataText = [ "Get to Know us.", "What is intexcoin.", "Join our Team.", "About us!"];
+  
+  // type one text in the typwriter
+  // keeps calling itself until the text is finished
+  function typeWriter(text, i, fnCallback) {
+    // chekc if text isn't finished yet
+    if (i < (text.length)) {
+      // add next character to h1
+     document.querySelector("h1").innerHTML = text.substring(0, i+1) +'<span aria-hidden="true"></span>';
+
+      // wait for a while and call this function again for next character
+      setTimeout(function() {
+        typeWriter(text, i + 1, fnCallback)
+      }, 100);
+    }
+    // text finished, call callback if there is a callback function
+    else if (typeof fnCallback == 'function') {
+      // call callback after timeout
+      setTimeout(fnCallback, 5000);
+    }
+  }
+  // start a typewriter animation for a text in the dataText array
+   function StartTextAnimation(i) {
+     if (typeof dataText[i] == 'undefined'){
+        setTimeout(function() {
+          StartTextAnimation(0);
+        },1000);
+     }
+     // check if dataText[i] exists
+    if (i < dataText[i].length) {
+      // text exists! start typewriter animation
+     typeWriter(dataText[i], 0, function(){
+       // after callback (and whole text has been animated), start next text
+       StartTextAnimation(i + 1);
+     });
+    }
+  }
+  // start the text animation
+  StartTextAnimation(2);
+});
+</script>
+    <script src="assets/js/bibase.js"></script>
+    <script src="static/assets/js/custom.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,138 @@
+
+
+
+
+    </style>
+    <head>
+<link rel="stylesheet" href="../statics/css/bulma.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    </head>
+   
+    <body>
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+              <a class="navbar-item" href="#">
+               Standardcoinoptional
+              </a>
+          
+              <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+              </a>
+            </div>
+          
+            <div id="navbarBasicExample" class="navbar-menu">
+              <div class="navbar-start">
+                <a class="navbar-item" href="{{url_for("index")}}">
+                  Home
+                </a>
+          
+                <a class="navbar-item" href="{{url_for("about")}}">
+                  About
+                </a>
+                <a class="navbar-item" href="{{url_for("account")}}">
+                    News
+                  </a>
+                  <a class="navbar-item" href="{{url_for("contact")}}">
+                    FAQ
+                  </a>
+               
+              </div>
+          
+              <div class="navbar-end">
+
+                <div class="navbar-item">
+                  <div class="buttons">
+                    {% if current_user.is_authenticated %}
+                    <a class="button is-primary" href="{{url_for("dashboard")}}">
+                      <strong>Dashboard</strong>
+                    </a>
+                    <a class="button is-light" href="{{url_for("logout")}}">
+                      Logout
+                    </a>
+                    {% else %}
+                    <a class="button is-primary" href="{{url_for("signin")}}">
+                        <strong>Login</strong>
+                      </a>
+                      <a class="button is-light" href="{{url_for("signup")}}">
+                        Signup
+                      </a>
+                      {% endif %}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nav>
+    
+   
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <nav class="mainnav">
+        <div class="logo">
+            <i style="color: darkgoldenrod;" class='bx bxl-bitcoin' ></i> <h2 id="bibasetext" class="title">Intexcoin</h2>
+        </div>
+
+        <div id="navbar" class="navbar">
+            <a href="{{url_for("index")}}">Home</a>
+            <a href="{{url_for("about")}}">About us</a>
+            <a href="{{url_for('contact')}}">Contact us</a>
+        </div>
+
+        <div id="navbarend" class="navbarend">
+            {% if current_user.is_authenticated %}
+            <a class="button btnregister" href="{{url_for("dashboard")}}">Dashboard</a>
+            <a class="button btnlogin" href="{{url_for("logout")}}" >Logout</a>
+            {% else %}
+            <a class="button btnregister" href="{{url_for("signup")}}">Create account</a>
+            <a class="button btnlogin" href="{{url_for("signin")}}" >Login</a>
+            
+            {% endif %}
+            
+
+        </div>
+
+        <div class="navmobile">
+          
+
+        <div>
+            <button onclick="ToggleNav()">
+                <i class='bx bx-menu-alt-right' ></i>
+              </button>
+            
+        </div>
+        </div>
+    </nav>
+     -->

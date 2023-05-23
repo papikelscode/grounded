@@ -1,0 +1,35 @@
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <div id="modal" class="bitcoinmodal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+          <header class="modal-card-head">
+            <p class="modal-card-title">Deposit</p>
+            <button class="delete" aria-label="close" onclick="goToPage()"></button>
+          </header>
+          <section class="modal-card-body">
+            <div class="field">
+              <label class="label">After successfull payment, Add your transaction proof to verify your deposit, Our system will verify the payment in 24hours & your wallet will be funded. Payment can be made to these wallet addresses below.</label>
+              <label class="radio">
+                <input type="radio" name="gender">
+                Standardcoinoption
+              </label>
+
+              <div class="control">
+                <input class="input" type="text" placeholder="Enter your Blockchain wallet payment ID">
+              </div>
+            </div>
+          </section>
+          <footer class="modal-card-foot">
+            <button class="button is-primary">Submit payment proof</button>
+            <button class="button" onclick="goToPage()">Cancel</button>
+          </footer>
+        </div>
+        <button class="modal-close is-large" aria-label="close" onclick="goToPage()"></button>
+      </div>
+
+      <script>
+            function goToPage(url) {
+              window.location.href = "dash";
+            }
+          </script>

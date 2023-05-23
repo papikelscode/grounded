@@ -1,0 +1,43 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+
+<div id="modal" class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">Choose Your Withdrawal Method</p>
+        <button class="delete" aria-label="close"></button>
+      </header>
+      <section class="modal-card-body">
+        <div class="buttons is-centered">
+          <div class="columns is-mobile is-centered">
+            <div class="column is-narrow">
+              <button class="button is-primary"onclick="goToPage()">Bitcoin Wallet</button>
+            </div>
+            <div class="column is-narrow">
+              <button class="button is-link" onclick="goToPages()">Etheruem/USDT Wallet</button>
+            </div>
+            <div class="column is-narrow">
+              <button class="button is-danger">Bank Account</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer class="modal-card-foot">
+        <button class="button is-primary">Save</button>
+        <button class="button">Cancel</button>
+      </footer>
+    </div>
+    <button class="modal-close is-large" aria-label="close"></button>
+  </div>
+
+
+  
+  <script>
+    function goToPage(url) {
+      window.location.href = "bitcoinwithdrawl";
+    }
+    function goToPages(url) {
+      window.location.href = "ethwallet";
+    }
+    
+  </script>

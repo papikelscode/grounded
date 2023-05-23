@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../statics/css/style.css">
+  <link rel="stylesheet" href="../statics/css/main.css">
+  <link rel="stylesheet" href="../statics/js/table/jstable.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <style>
+    /* #overlayer {
+  width:100%;
+  height:100%;  
+  position:fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  z-index: 2;
+  background:#4a4a4a;
+}
+.preloader p{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -45px;
+    width: 120px;
+    height: 90px;
+    
+    text-align: center;
+    color: black;
+    font-size: 24px;
+    z-index: 3;
+}
+.loader {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  z-index:3;
+  border: 4px solid #Fff;
+  top: 50%;
+  animation: loader 2s infinite ease;
+}
+.loader-inner {
+  vertical-align: top;
+  display: inline-block;
+  width: 100%;
+  background-color: #fff;
+  animation: loader-inner 2s infinite ease-in;
+}
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(180deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(180deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes loader-inner {
+  0% {
+    height: 0%;
+  }
+  25% {
+    height: 0%;
+  }
+  50% {
+    height: 100%;
+  }
+  75% {
+    height: 100%;
+  }
+  100% {
+    height: 0%;
+  }
+}
+@-webkit-keyframes loader-inner {
+  0% {
+    height: 0%;
+  }
+  25% {
+    height: 0%;
+  }
+  50% {
+    height: 100%;
+  }
+  75% {
+    height: 100%;
+  }
+  100% {
+    height: 0%;
+  }
+} */
+
+:root{
+    /* --primarycolor: #C7AF88; */
+    --primarycolor: #070d2b;
+
+}
+
+.preloader {
+        position:fixed;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+        background: white ; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        height: 100%;
+        z-index:99; /* makes sure it stays on top */
+    }
+    .loaded{
+        visibility: hidden;
+    }
+    
+
+    .progress__container{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 150px;
+        background-color: white;
+    }
+
+    .loadicon{
+        color: var(--primarycolor);
+    }
+
+    #progress_label{
+        color: var(--primarycolor);
+    }
+
+
+    .shownav{
+        display: block;
+    }
+
+    .is-activex{
+        display: block;
+    }
+    @keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+    #demo{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 50%;
+      background-color: #070d2b;
+      color: #fff;
+      animation: modalopen;
+      transform: translate(-50%, -50%);
+      width: 20%;
+      height: 3rem;
+      font-size: 25px;
+      margin-top: 3%;
+
+
+    }
+    .modal-card {
+      max-width: 800px;
+      width: 90%;
+    }
+
+    @media screen and (max-width: 768px) {
+      .modal-card {
+        width: 100%;
+      }
+    }
+    @media only screen and (max-width:640px){
+      #demo{
+        margin-bottom: -20%;
+        width: 60%;
+        height:4rem;
+      }
+      .title{
+    font-size: 15px;
+  }
+    }
+    
+  </style>
+  <title>Trade | CALL</title>
+  
+</head>
+  
+<body>
+
+
+   <!-- <div class="preloader" id="preloader">
+     
+    <div class="progress__container" >
+      <center>
+        <h4 id="progress_label">
+            <i style="color: darkgoldenrod;" class='bx bxl-bitcoin' ></i> <h2 id="bibasetext" class="title"><img width="555" src="../static/assets/imgs/illu/Bitcoin logo spinning.gif" alt=""></h2>
+        
+         </h4>
+        <progress id="progress" class="progress is-small" value="0" max="100">20%</progress>
+        
+      </center>
+    </div>
+  </div>    -->
+
+  <!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <style>
+    .sidebar {
+      background-color: blue;
+      height: 100vh;
+      padding: 1.5rem;
+     
+    }
+  .menu-list a {
+      color: whitesmoke;
+    }
+    .menu-label {
+      color: whitesmoke;
+      font-size: 30px;
+      font-weight: bold;
+    }
+
+    @media only screen and (max-width:640px){
+      .sidebar{
+        height: 60vh;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="columns">
+    <div class="column is-3">
+      <aside class="menu sidebar">
+        <p class="menu-label">
+          General
+        </p>
+        <ul class="menu-list">
+          <li><a href="#">Dashboard</a></li>
+          <li><a href="#">Profile</a></li>
+          <li><a href="#">Setting</a></li>
+          
+        </ul>
+        
+        
+        <p class="menu-label">
+          Transactions
+        </p>
+        <ul class="menu-list">
+          <li><a href="#" data-target="modal" aria-haspopup="true">Withdraw</a></li>
+          <li><a href="#" onclick="goToPags()">Deposit</a></li>
+          <li><a href="#">Transaction History</a></li>
+         
+        </ul>
+      </aside>
+    </div>
+    <div class="column is-9">
+      <div class="body-container">
+
+       
+        <div class="container">
+        
+            
+          
+          <div class="trad">
+            <iframe scrolling="no" allowtransparency="true" frameborder="0" src="https://s.tradingview.com/embed-widget/ticker-tape/?locale=en#%7B%22symbols%22%3A%5B%7B%22proName%22%3A%22BITSTAMP%3ABTCUSD%22%2C%22title%22%3A%22BTC%2FUSD%22%7D%2C%7B%22description%22%3A%22TESLA%22%2C%22proName%22%3A%22NASDAQ%3ATSLA%22%7D%2C%7B%22description%22%3A%22SNAP%20INC%22%2C%22proName%22%3A%22NYSE%3ASNAP%22%7D%2C%7B%22description%22%3A%22TWITTER%20INC%22%2C%22proName%22%3A%22NYSE%3ATWTR%22%7D%2C%7B%22description%22%3A%22FACEBOOK%20INC%22%2C%22proName%22%3A%22NASDAQ%3AFB%22%7D%2C%7B%22description%22%3A%22APPLE%20INC%22%2C%22proName%22%3A%22NASDAQ%3AAAPL%22%7D%2C%7B%22description%22%3A%22COCA-COLA%20CO%22%2C%22proName%22%3A%22NYSE%3AKO%22%7D%5D%2C%22showSymbolLogo%22%3Atrue%2C%22colorTheme%22%3A%22dark%22%2C%22isTransparent%22%3Afalse%2C%22displayMode%22%3A%22compact%22%2C%22width%22%3A%22100%25%22%2C%22height%22%3A74%2C%22utm_source%22%3A%22app.cryptoroots.net%22%2C%22utm_medium%22%3A%22widget%22%2C%22utm_campaign%22%3A%22ticker-tape%22%7D" style="box-sizing: border-box; height: 74px; width: 100%;"></iframe>
+           </div>
+        
+          <div class="columns">
+      
+            <div class="column">
+                <div style="height: 10rem; padding: .75rem;"  class="card">
+                  <div class="container">
+                      <div style="display: none;" id="notificationj" class="notification is-primary">
+                                <button class="delete"></button>
+                                <p id="alertmsgj"></p>
+                        </div>
+                  
+                    <h4 style="text-align: center;" class="title">
+                      ${{current_user.profit}}
+                    </h4>
+                    <p style="text-align: center;" class="subtitle">profit</p>
+                   
+                  </div>
+                  </div>
+            </div>
+      
+            <div class="column">
+              <div style="height: 10rem; padding: .75rem;" class="card">
+                <div class="container">
+                  <h4 style="text-align: center;" class="title">
+                    ${{current_user.balance}}
+                  </h4>
+                  <p style="text-align: center;" class="subtitle">Balance</p>
+                  <button onclick="goToPags()" style="width: 100%;" class="button signinbtn">
+                  Deposit
+                  </button>
+      
+                </div>
+              </div>
+           </div>
+      
+           <div class="column">
+            <div style="height: 10rem; padding: .75rem;"  class="card">
+              <div class="container">
+                <h4 style="text-align: center;"  class="title">
+                  {{total}}
+                </h4>
+                <p style="text-align: center;" class="subtitle">Total Balance</p>
+              </div>
+            </div>
+        </div>
+      
+      
+      
+          </div>
+        </div>
+      
+      
+      
+      <div class="tradingview-widget-container">
+        <div id="tradingview_e1cb6"></div>
+        <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/BTCUSDT/?exchange=BINANCE" rel="noopener" target="_blank"><span class="blue-text"></div>
+        <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+        <script type="text/javascript">
+        new TradingView.widget(
+        {
+        "width": 980,
+        "height": 610,
+        "symbol": "BINANCE:BTCUSDT",
+        "interval": "D",
+        "timezone": "Etc/UTC",
+        "theme": "light",
+        "style": "1",
+        "locale": "en",
+        "toolbar_bg": "#f1f3f6",
+        "enable_publishing": false,
+        "hide_side_toolbar": false,
+        "allow_symbol_change": true,
+        "watchlist": [
+          "BINANCE:BTCUSDT",
+          "BITSTAMP:BTCUSD",
+          "COINBASE:BTCUSD",
+          "BINANCE:ETHUSDT",
+          "BINANCE:GRTUSDT"
+        ],
+        "details": true,
+        "hotlist": true,
+        "studies": [
+          "chandeMO@tv-basicstudies",
+          "DetrendedPriceOscillator@tv-basicstudies",
+          "DM@tv-basicstudies"
+        ],
+        "container_id": "tradingview_e1cb6"
+      }
+        );
+        </script>
+      </div>
+    </div>
+  </div>
+ 
+
+
+
+<!-- TradingView Widget END -->
+                      </div>
+                    </div>
+                      <div id="modal" class="modal">
+                        <div class="modal-background"></div>
+                        <div class="modal-card">
+                          <header class="modal-card-head">
+                            <p class="modal-card-title">Choose Your Withdrawal Method</p>
+                            <button class="delete" aria-label="close"></button>
+                          </header>
+                          <section class="modal-card-body">
+                            <div class="buttons is-centered">
+                              <div class="columns is-mobile is-centered">
+                                <div class="column is-narrow">
+                                  <button class="button is-primary"onclick="goToPage()">Bitcoin Wallet</button>
+                                </div>
+                                <div class="column is-narrow">
+                                  <button class="button is-link" onclick="goToPages()">Etheruem/USDT Wallet</button>
+                                </div>
+                                <div class="column is-narrow">
+                                  <button class="button is-danger">Bank Account</button>
+                                </div>
+                              </div>
+                            </div>
+                          </section>
+                          <footer class="modal-card-foot">
+                            <button class="button is-primary">Save</button>
+                            <button class="button">Cancel</button>
+                          </footer>
+                        </div>
+                        <button class="modal-close is-large" aria-label="close"></button>
+                      </div>
+
+      
+                      <script>
+                        function goToPage(url) {
+                          window.location.href = "bitcoinwithdrawl";
+                        }
+                        function goToPages(url) {
+                          window.location.href = "ethwallet";
+                        }
+                       
+                      </script>
+                      <script>
+                         function goToPags(url) {
+                          window.location.href = "deposit";
+                        }
+                      </script>
+                   
+                      <script src="statics/js/table/jstable.min.js"></script>
+                      <script src="{{url_for("static",filename='assets/js/axios.min.js')}}"></script>
+                      <script src="statics/js/dashboard.js"></script>
+                      <script src="statics/js/custom.js"></script>
+                      <script>
+                        document.addEventListener('DOMContentLoaded', function () {
+                          const modalButton = document.querySelector('[data-target="modal"]');
+                          const modal = document.getElementById('modal');
+                          const modalCloseButtons = modal.querySelectorAll('.modal-close, .delete');
+                    
+                          modalButton.addEventListener('click', function () {
+                            modal.classList.add('is-active');
+                          });
+                    
+                          modalCloseButtons.forEach(function (button) {
+                            button.addEventListener('click', function () {
+                              modal.classList.remove('is-active');
+                            });
+                          });
+                        });
+                      </script>
+                     
+                    
+ </body>
+   </html>

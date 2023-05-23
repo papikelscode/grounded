@@ -1,0 +1,30 @@
+                <!--Bitcoin wallet-->
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+                <div id="modal" class="bitcoinmodal">
+                    <div class="modal-background"></div>
+                    <div class="modal-card">
+                      <header class="modal-card-head">
+                        <p class="modal-card-title">Etheruem / USDT Wallet Address</p>
+                        <button class="delete" aria-label="close" onclick="goToPage()"></button>
+                      </header>
+                      <section class="modal-card-body">
+                        <div class="field">
+                          <label class="label">Add your Etheruem/USDT wallet address to receive your dividends, as your ROi mature for withdrawal</label>
+                          <div class="control">
+                            <input class="input" type="text" placeholder="Enter your Etheruem/USDT Wallet Address">
+                          </div>
+                        </div>
+                      </section>
+                      <footer class="modal-card-foot">
+                        <button class="button is-primary">Submit wallet</button>
+                        <button class="button" onclick="goToPage()">Cancel</button>
+                      </footer>
+                    </div>
+                    <button class="modal-close is-large" aria-label="close" onclick="goToPage()"></button>
+                  </div>
+
+                  <script>
+                        function goToPage(url) {
+                          window.location.href = "dash";
+                        }
+                      </script>

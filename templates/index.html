@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../statics/css/style.css">
+    <link rel="stylesheet" href="../statics/css/main.css">
+    <link rel="stylesheet" href="../statics/css/bulma.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <title>Standardcoinoption | Home</title>
+    <style>
+      body{
+        background-color: whitesmoke;
+        color: purple;
+      }
+      
+      .middle-section{
+  margin-left: 10%;
+}
+.middle-section .ways{
+  font-size: 40px;
+  text-align: center;
+  color:whitesmoke;
+  font-weight: 600;
+  margin-top: 40px;
+  font-family: 'alice', display;
+}
+.icon{
+  width: 30px;
+  height: 30px;
+  background-color: goldenrod;
+  color: whitesmoke;
+  border-radius: 100%;
+  font-size: 20px;
+  margin-bottom: 5%;
+}
+.middle-section img{
+  width: 200px;
+  margin-bottom:5% ;
+  
+}
+.convert{
+    margin-top: 5%;
+    margin-left: 11%;
+    margin-right: 10%;
+    z-index: 2;
+    width: 80%;
+    height: 27rem;
+    background-color: var(--background-color);
+    box-shadow: 0 4px 10px;
+  
+   
+  }
+.middle-section h2{
+  font-family: 'blackopps', display;
+  font-size: 35px;
+  color: goldenrod;
+  font-weight: 300;
+  font-stretch: extra-expanded;
+
+}
+.middle-section h3{
+    font-family: 'Candal', sans-serif;
+    color: whitesmoke;
+    
+}
+#content-icon img{
+  width: 50px;
+}
+.certi{
+  font-size: 40px;
+  font-weight: 500;
+  font-family:'Times New Roman', Times, serif;
+}
+#gett{
+
+/* From cssbuttons.io */
+
+padding: 1em 1em;
+font-size: 25px;
+width: 35%;
+letter-spacing: 2.5px;
+font-weight: 100;
+color: whitesmoke;
+background-color: blue;
+border: none;
+border-radius: 45px;
+box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+transition: all 0.3s ease 0s;
+cursor: pointer;
+outline: none;
+height: 4rem;
+}
+
+#gett:hover {
+background-color: whitesmoke;
+box-shadow: 0px 15px 20px #ddd(46, 229, 157, 0.4);
+color: black;
+transform: translateY(-7px);
+
+
+}
+#getbtn{
+  padding: 1em 1em;
+font-size: 25px;
+width: 35%;
+letter-spacing: 2.5px;
+font-weight: 100;
+color:whitesmoke;
+background-color: blue;
+border: none;
+border-radius: 45px;
+box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+transition: all 0.3s ease 0s;
+cursor: pointer;
+outline: none;
+height: 4rem;
+}
+#getbtn:hover {
+background-color: whitesmoke;
+box-shadow: 0px 15px 20px #ddd(46, 229, 157, 0.4);
+color: black;
+transform: translateY(-7px);
+
+
+}
+#getbtnx{
+  padding: 1em 1em;
+font-size: 25px;
+width: 50%;
+font-weight: 100;
+color: #000;
+background-color: whitesmoke;
+
+box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+transition: all 0.3s ease 0s;
+cursor: pointer;
+outline: none;
+height: 2.5rem;
+}
+#getbtnx:hover {
+background-color: goldenrod;
+box-shadow: 0px 15px 20px #ddd(46, 229, 157, 0.4);
+color: black;
+transform: translateY(-7px);
+
+
+}
+
+@media only screen and (max-width:960px){
+.ways{
+  font-size: 30px;
+}
+.foto-img{
+  width: 3rem;
+}
+.row{
+  flex-direction: column;
+}
+.middle-section{
+  margin-left: 15%;
+}
+.middle-section h1{
+  margin-right: 20%;
+}
+#content-icon{
+  display: none;
+}
+#row{
+  flex-direction: column;
+}
+section .card{
+  width: auto;
+  margin-left: auto;
+}
+.step{
+  width: 35%;
+  font-size: 20px;
+}
+#getbtn{
+  width: 100%;
+}
+#gett{
+  width: 100%;
+}
+.certi{
+  font-size: 30px;
+  text-align: center;
+  justify-content: center;
+}
+#getbtnx{
+  width: 100%;
+  margin-left: -10%;
+}
+.title{
+    font-size: 15px;
+  }
+}
+
+    </style>
+</head>
+<body>
+    {% include "nav.html" %}
+
+    <!-- <div class="preloader" id="preloader">
+     
+      <div class="progress__container" >
+        <center>
+          <h4 id="progress_label">
+              <i style="color: darkgoldenrod;" class='bx bxl-bitcoin' ></i> <h2 id="bibasetext" class="title"><img width="555" src="../static/assets/imgs/illu/Bitcoin logo spinning.gif" alt=""></h2>
+          
+           </h4>
+          <progress id="progress" class="progress is-small" value="0" max="100">20%</progress>
+          
+        </center>
+      </div>
+    </div>    -->
+  
+
+
+   
+    <section class="hero banner is-medium">
+
+        <div id="particles-js"></div>
+
+      <div class="hero-body">
+
+
+        <div class="container">
+          <div class="columns">
+              <div class="column " >
+                  <h1 style="color: black; font-size: 40px;" class="title textwhite animate__animated animate__bounce">
+                    SECURE AND FAST TRADING PLATFORM 
+                  </h1>
+                  <p class="textwhite" style="font-size: 18px;">
+                    We’re reinventing the global equity blockchian
+                    Looking for highest returns on your trads?
+                    Standardcoinoption is made so even traders with zero trading experience are successfully making a profit. Our program, unlike any other, guarantees fix hourly interest for traders regardless of market conditions.
+                  </p>
+                  <br>
+                  {% if current_user.is_authenticated %}
+                    <div  class="calltoaction">
+                      <a id="getbtn" href="/dashboard" class="button learnmore">Dashboard</a>
+                      <a id="getbtn" href="/logout" class="button investnow">Logout</a>
+                    </div>
+                {% else %}
+                    <div  class="calltoaction">
+                      <a id="getbtn" href="/signup" class="button learnmore">Register here</a>
+                      <a  id="getbtn"href="/signin" class="button investnow">Login here</a>
+                    </div>
+                  {% endif %}
+                  
+              </div>
+
+              <div class="column">
+                  <img src="../statics/imgs/illu/undraw_Ether_re_y7ft.png" alt="">
+
+
+              </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+
+    <div class="container section2">
+        <div class="columns">
+            <div  class="column" data-aos="fade-up">
+                <h1 style="color:black" class="title  textcentered">
+                    What is Standardcoinoption 
+                </h1>
+                  <p class="subtitle" style="color:black"> 
+                  Standardcoinoption  is an advanced trading platform based in the UK. It was established 2016. We are strictly into trading, mining  in paid adverts. Our vision is to build a strong alliance and everlasting partnership with our traders , also leading them to financial independence.
+
+                  
+
+                </p>
+
+
+                
+
+                <a id="gett" href="" class="button bibasebtn">Get started</a>
+
+
+                <div class="iluconatiner">
+
+                    <img class="ilu" src="static/assets/imgs/illu/1.svg" alt="" srcset="">
+
+
+                </div>
+
+            </div>
+
+            <div class="column" data-aos="fade-down">
+                <div class="iluconatiner">
+                    <img class="ilu" src="static/assets/imgs/illu/2.svg" alt="" srcset="">
+
+                </div>
+
+                <h1 style="color:black" class="title textcentered">
+                    Trading with Standardcoinoption
+                </h1>
+                <p>
+             Cryptocurrency & Forex Trading Platform - is an officially registered, legitimate company. You can check the number of service license to verify the legality of the services we provide.                 
+                </p>
+            </div>
+        </div>
+        <!-- <div  class="column" data-aos="fade-up">
+          <h1 class="certi" style="color:whitesmoke"> 
+            <b> Check out our Certificate of Investment </b> <br>
+            <a id="gett" href="../static/assets/imgs/WhatsApp Image 2022-05-07 at 10.14.23 AM.jpeg" class="button bibasebtn">Certificate</a>
+
+           
+            </button>
+
+          </h1>
+        </div> -->
+    </div>
+
+    <div class="container section2">
+      <div class="card" data-aos="flip-up">
+        <div style="height:560px; background-color: #FFFFFF; overflow:hidden; text-align: right; line-height:14px; font-size: 12px; font-feature-settings: normal; text-size-adjust: 100%; box-shadow: inset 0 -20px 0 0 #FFFFFF;padding:1px;padding: 0px; margin: 0px; width: 100%;">
+          <div style="height:540px; padding:0px; margin:0px; width: 100%;">
+            <iframe src="https://widget.coinlib.io/widget?type=chart&theme=light&coin_id=859&pref_coin_id=1505" width="100%" height="536px" scrolling="auto" marginwidth="0" marginheight="0" frameborder="0" border="0" style="border:0;margin:0;padding:0;line-height:14px;"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+
+   
+    
+
+    <section class="container section2">
+      <div class="columns">
+        <div class="column">
+          <h1 style="color: whitesmoke; text-align: center;" class="title value" akhi="6870"></h1>
+          <p class="subtitle" style="color: whitesmoke;text-align: center;">Total Traders</p>
+        </div>
+
+        <div class="column">
+          <h1 style="color: whitesmoke;text-align: center;" class="title value" akhi="5787">0</h1>
+          <p class="subtitle" style="color: whitesmoke;text-align: center;">Total Withdraw</p>
+        </div>
+
+        <div class="column">
+          <h1 style="color: whitesmoke;text-align: center;" class="title value" akhi="72850"></h1>
+          <p style="color: whitesmoke;text-align: center;" class="subtitle">Deposited</p>
+        </div>
+
+        <div class="column">
+          <h1 style="color: whitesmoke;text-align: center;" class="title value" akhi="{{activeusers}}">0</h1>
+          <p style="color: whitesmoke;text-align: center;" class="subtitle">Active users</p>
+        </div>
+      </div>
+  </section>
+  <div class="convert">
+    <div class="con-head">
+      <center>
+        <h1>CRYPTO CONVERTER</h1>
+        <h2>FIND OUT THE CURRENT BITCOIN VALUE WITH OUR EASY-TO-USE CONVERTER</h2>
+  
+       <div class="row">
+         <div class="column">
+          <div style="height:363px; background-color: #FFFFFF; overflow:hidden; box-sizing: border-box; border: 1px solid #56667F; border-radius: 4px; text-align: right; line-height:14px; font-size: 12px; font-feature-settings: normal; text-size-adjust: 100%; box-shadow: inset 0 -20px 0 0 #56667F; padding: 0px; margin: 0px; width: 100%;"><div style="height:413px; padding:0px; margin:0px; width: 100%;"><iframe src="https://widget.coinlib.io/widget?type=full_v2&theme=light&cnt=6&pref_coin_id=1505&graph=yes" width="100%" height="409px" scrolling="auto" marginwidth="0" marginheight="0" frameborder="0" border="0" style="border:0;margin:0;padding:0;"></iframe></div><div style="color: #FFFFFF; line-height: 14px; font-weight: 400; font-size: 11px; box-sizing: border-box; padding: 2px 6px; width: 100%; font-family: Verdana, Tahoma, Arial, sans-serif;"><a href="https://coinlib.io" target="_blank" style="font-weight: 500; color: #FFFFFF; text-decoration:none; font-size:11px">Cryptocurrency Prices</a></div></div>
+  
+         </div>
+         <!-- <div class="column">
+          <div style="width: 200px; height:335px; background-color: #FAFAFA; overflow:hidden; box-sizing: border-box; border: 1px solid #56667F; border-radius: 4px; text-align: right; line-height:14px; block-size:335px; font-size: 12px; font-feature-settings: normal; text-size-adjust: 100%; box-shadow: inset 0 -20px 0 0 #56667F;margin: 0;width: 250px;padding:1px;padding: 0px; margin: 0px;"><div style="height:315px; padding:0px; margin:0px; width: 100%;"><iframe src="https://widget.coinlib.io/widget?type=converter&theme=light" width="250" height="310px" scrolling="auto" marginwidth="0" marginheight="0" frameborder="0" border="0" style="border:0;margin:0;padding:0;"></iframe></div><div style="color: #FFFFFF; line-height: 14px; font-weight: 400; font-size: 11px; box-sizing: border-box; padding: 2px 6px; width: 100%; font-family: Verdana, Tahoma, Arial, sans-serif;"><a href="#" target="_blank" style="font-weight: 500; color: #FFFFFF; text-decoration:none; font-size:11px"></div></div>
+         </div> -->
+       </div>
+    
+    </div>
+   
+  </div>
+  
+
+    <section class="container section2">
+        <h1 data-aos="flip-left" class="title textcentered" style="color: goldenrod;margin-top: 5%;">Our investment plan</h1>
+          <div  class="carousel" id="carousel-demo">
+            
+             
+            <div class="pricing-table is-comparative">
+              {% for plan in plans %}
+              
+              {% if plan.iSpricing %}
+              <div class="pricing-plan">
+                <div class="plan-header">{{plan.plan}}</div>
+                <div class="plan-price"><span class="plan-price-amount"><span class="plan-price-currency">$</span>{{plan.plan_price}}</span></div>
+                <div class="plan-items">
+                  <div class="plan-item" data-feature="ROI">Return {{plan.plan_roi}} %</div>
+                  <div class="plan-item" data-feature="Rate">Rate {{plan.plan_rate}} days</div>
+                  <div class="plan-item" data-feature="">Free Consultation</div>
+                  <div class="plan-item" data-feature="">Instant Withdrawal</div>
+                </div>
+                <div class="plan-footer">
+                  <a href="/signup" class="button is-fullwidth">Choose plan</a>
+                </div>
+              </div>
+              {% endif  %}
+            
+              {% if plan.isWarning %}
+              <div class="pricing-plan is-warning">
+                <div class="plan-header">{{plan.plan}}</div>
+                <div class="plan-price"><span class="plan-price-amount"><span class="plan-price-currency">$</span>{{plan.plan_price}}</span></div>
+                <div class="plan-items">
+                  <div class="plan-item" data-feature="ROI">Return {{plan.plan_roi}} %</div>
+                  <div class="plan-item" data-feature="Rate">Rate {{plan.plan_rate}} days</div>
+                  <div class="plan-item" data-feature="">Free Consultation</div>
+                  <div class="plan-item" data-feature="">Instant Withdrawal</div>
+                
+                </div>
+                <div class="plan-footer">
+                  <a href="/signup" class="button is-fullwidth">Choose plan</a>
+                </div>
+              </div>
+              {% endif %}
+            
+              {% if plan.IsActive %}
+              <div class="pricing-plan is-active">
+                <div class="plan-header">{{plan.plan}}</div>
+                <div class="plan-price"><span class="plan-price-amount"><span class="plan-price-currency">$</span>{{plan.plan_price}}</span></div>
+                <div class="plan-items">
+                  <div class="plan-item" data-feature="ROI">Return {{plan.plan_roi}} %</div>
+                  <div class="plan-item" data-feature="Rate">Rate {{plan.plan_rate}} days</div>
+                  <div class="plan-item" data-feature="">Free Consultation</div>
+                  <div class="plan-item" data-feature="">Instant Withdrawal</div>
+                
+                </div>
+                <div class="plan-footer">
+                  <a href="/signup" class="button is-fullwidth">Choose plan</a>
+                </div>
+              </div>
+              {% endif %}
+              
+              {% if plan.isDanger %}
+              <div class="pricing-plan is-danger">
+                <div class="plan-header">{{plan.plan}}</div>
+                <div class="plan-price"><span class="plan-price-amount"><span class="plan-price-currency">$</span>{{plan.plan_price}}</span></div>
+                <div class="plan-items">
+                  <div class="plan-item" data-feature="ROI">Return {{plan.plan_roi}} %</div>
+                  <div class="plan-item" data-feature="Rate">Rate {{plan.plan_rate}} days</div>
+                  <div class="plan-item" data-feature="">Free Consultation</div>
+                  <div class="plan-item" data-feature="">Instant Withdrawal</div>
+                
+                </div>
+                <div class="plan-footer">
+                  <a href="/signup" class="button is-fullwidth">Choose plan</a>
+                </div>
+              </div>
+              {% endif %}
+              
+
+              {% endfor %}
+
+
+            </div>
+
+
+            <div class="pricing-table is-comparative">
+              {% for plan in plans %}
+              
+              {% if plan.iSpricing %}
+              <div class="pricing-plan">
+                <div class="plan-header">{{plan.plan}}</div>
+                <div class="plan-price"><span class="plan-price-amount"><span class="plan-price-currency">$</span>{{plan.plan_price}}</span></div>
+                <div class="plan-items">
+                  <div class="plan-item" data-feature="ROI">Return {{plan.plan_roi}} %</div>
+                  <div class="plan-item" data-feature="Rate">Rate {{plan.plan_rate}} days</div>
+                  <div class="plan-item" data-feature="">Free Consultation</div>
+                  <div class="plan-item" data-feature="">Instant Withdrawal</div>
+                
+                </div>
+                <div class="plan-footer">
+                  <a href="/signup" class="button is-fullwidth">Choose plan</a>
+                </div>
+              </div>
+              {% endif  %}
+            
+              {% if plan.isWarning %}
+              <div class="pricing-plan is-warning">
+                <div class="plan-header">{{plan.plan}}</div>
+                <div class="plan-price"><span class="plan-price-amount"><span class="plan-price-currency">$</span>{{plan.plan_price}}</span></div>
+                <div class="plan-items">
+                  <div class="plan-item" data-feature="ROI">Return {{plan.plan_roi}} %</div>
+                  <div class="plan-item" data-feature="Rate">Rate {{plan.plan_rate}} days</div>
+                  <div class="plan-item" data-feature="">Free Consultation</div>
+                  <div class="plan-item" data-feature="">Instant Withdrawal</div>
+                
+                </div>
+                <div class="plan-footer">
+                  <a href="/signup" class="button is-fullwidth">Choose plan</a>
+                </div>
+              </div>
+              {% endif %}
+            
+              {% if plan.IsActive %}
+              <div class="pricing-plan is-active">
+                <div class="plan-header">{{plan.plan}}</div>
+                <div class="plan-price"><span class="plan-price-amount"><span class="plan-price-currency">$</span>{{plan.plan_price}}</span></div>
+                <div class="plan-items">
+                  <div class="plan-item" data-feature="ROI">Return {{plan.plan_roi}} %</div>
+                  <div class="plan-item" data-feature="Rate">Rate {{plan.plan_rate}} days</div>
+                  <div class="plan-item" data-feature="">Free Consultation</div>
+                  <div class="plan-item" data-feature="">Instant Withdrawal</div>
+                
+                </div>
+                <div class="plan-footer">
+                  <a href="/signup" class="button is-fullwidth">Choose plan</a>
+                </div>
+              </div>
+              {% endif %}
+              
+              {% if plan.isDanger %}
+              <div class="pricing-plan is-danger">
+                <div class="plan-header">{{plan.plan}}</div>
+                <div class="plan-price"><span class="plan-price-amount"><span class="plan-price-currency">$</span>{{plan.plan_price}}</span></div>
+                <div class="plan-items">
+                  <div class="plan-item" data-feature="ROI">Return {{plan.plan_roi}} %</div>
+                  <div class="plan-item" data-feature="Rate">Rate {{plan.plan_rate}} days</div>
+                  <div class="plan-item" data-feature="">Free Consultation</div>
+                  <div class="plan-item" data-feature="">Instant Withdrawal</div>
+                
+                </div>
+                <div class="plan-footer">
+                  <a href="/signup" class="button is-fullwidth">Choose plan</a>
+                </div>
+              </div>
+              {% endif %}
+              
+
+              {% endfor %}
+
+
+            </div>
+
+
+            <div class="pricing-table is-comparative">
+              {% for plan in plans %}
+              
+              {% if plan.iSpricing %}
+              <div class="pricing-plan">
+                <div class="plan-header">{{plan.plan}}</div>
+                <div class="plan-price"><span class="plan-price-amount"><span class="plan-price-currency">$</span>{{plan.plan_price}}</span></div>
+                <div class="plan-items">
+                  <div class="plan-item" data-feature="ROI">Return {{plan.plan_roi}} %</div>
+                  <div class="plan-item" data-feature="Rate">Rate {{plan.plan_rate}} days</div>
+                  <div class="plan-item" data-feature="">Free Consultation</div>
+                  <div class="plan-item" data-feature="">Instant Withdrawal</div>
+                
+                </div>
+                <div class="plan-footer">
+                  <a href="/signup" class="button is-fullwidth">Choose plan</a>
+                </div>
+              </div>
+              {% endif  %}
+            
+              {% if plan.isWarning %}
+              <div class="pricing-plan is-warning">
+                <div class="plan-header">{{plan.plan}}</div>
+                <div class="plan-price"><span class="plan-price-amount"><span class="plan-price-currency">$</span>{{plan.plan_price}}</span></div>
+                <div class="plan-items">
+                  <div class="plan-item" data-feature="ROI">Return {{plan.plan_roi}} %</div>
+                  <div class="plan-item" data-feature="Rate">Rate {{plan.plan_rate}} days</div>
+                  <div class="plan-item" data-feature="">Free Consultation</div>
+                  <div class="plan-item" data-feature="">Instant Withdrawal</div>
+                
+                </div>
+                <div class="plan-footer">
+                  <a href="/signup" class="button is-fullwidth">Choose plan</a>
+                </div>
+              </div>
+              {% endif %}
+            
+              {% if plan.IsActive %}
+              <div class="pricing-plan is-active">
+                <div class="plan-header">{{plan.plan}}</div>
+                <div class="plan-price"><span class="plan-price-amount"><span class="plan-price-currency">$</span>{{plan.plan_price}}</span></div>
+                <div class="plan-items">
+                  <div class="plan-item" data-feature="ROI">Return {{plan.plan_roi}}%</div>
+                  <div class="plan-item" data-feature="Rate">Rate {{plan.plan_rate}} days</div>
+                  <div class="plan-item" data-feature="">Free Consultation</div>
+                  <div class="plan-item" data-feature="">Instant Withdrawal</div>
+                
+                </div>
+                <div class="plan-footer">
+                  <a href="/signup" class="button is-fullwidth">Choose plan</a>
+                </div>
+              </div>
+              {% endif %}
+              
+              {% if plan.isDanger %}
+              <div class="pricing-plan is-danger">
+                <div class="plan-header">{{plan.plan}}</div>
+                <div class="plan-price"><span class="plan-price-amount"><span class="plan-price-currency">$</span>{{plan.plan_price}}</span></div>
+                <div class="plan-items">
+                  <div class="plan-item" data-feature="ROI">Return {{plan.plan_roi}}%</div>
+                  <div class="plan-item" data-feature="Rate">Rate {{plan.plan_rate}} days</div>
+                  <div class="plan-item" data-feature="">Free Consultation</div>
+                  <div class="plan-item" data-feature="">Instant Withdrawal</div>
+                
+                </div>
+                <div class="plan-footer">
+                  <a href="/signup" class="button is-fullwidth">Choose plan</a>
+                </div>
+              </div>
+              {% endif %}
+              
+
+              {% endfor %}
+
+
+            </div>
+
+
+            
+
+          </div>    
+    </section>
+
+  
+
+    <div id="videomodal" class="modal">
+      <div class="modal-background"></div>
+      <div class="modal-content">
+        <iframe style="padding: .75rem;" width="100%" height="315" src="https://www.youtube.com/embed/3cCUkmTJNo8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <button onclick="Modal('videomodal')" class="modal-close is-large" aria-label="close"></button>
+    </div>
+
+    {% include "footer.html" %}
+
+
+<!-- 
+    <footer class="footer">
+      <div class="footer-item">
+        <div class="logo">
+          <i class='bx bxl-bitcoin' ></i> <h1 class="title">Bibase</h1>
+        </div>
+        <p>reinventing the global equity blockchian</p>
+        <div class="social">
+
+
+          <a href="https://api.whatsapp.com/send?phone=+447888875474&text=Hello Bibase capital">
+            <i class='bx bxl-whatsapp' ></i>
+          </a>
+          <a href="tel:+447888875474">
+            <i class='bx bx-phone-call' ></i>         
+           </a>
+           <a href="">
+            <i class='bx bx-envelope' ></i>
+           </a>
+
+          <a href="">
+            <i class='bx bxl-twitter' ></i>
+          </a>
+
+          <a href="">
+            <i class='bx bxl-facebook-circle' ></i>
+          </a>
+
+        </div>
+      </div>
+
+
+      <div class="footer-item">
+        <h4 class="title">Short Links</h4>
+        <a href="">Home</a>
+        <a href="/about">About us</a>
+        <a href="/contact">Contact</a>
+      </div>
+
+
+      <div class="footer-item">
+        <h4 class="title">Company</h4>
+        <a href="/about">Career</a>
+        <a href="/contact">Press release</a>
+      </div>
+
+      <div class="footer-item">
+
+        <div class="contactform">
+          <div class="contactforminput">
+              <i class='bx bx-user' ></i>
+              <input type="text" id="fname" placeholder="Fullname">
+          </div>
+          <div class="contactforminput">
+              <i class='bx bx-envelope'></i>
+              <input type="text" id="email" placeholder="Email">
+          </div>
+          
+          <div class="contactforminput-textarea">
+              <textarea placeholder="your messages"></textarea>
+              <button><i class='bx bx-send'></i></button>
+          </div>
+         </div>
+
+      </div>
+
+      </div>
+
+    </footer>
+     -->
+  
+
+
+
+    
+    
+    {% include "chat.html" %}
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  
+    <script src="../static/courosel/bulma-carousel.js"></script>
+    <script src="../static/js/bibase.js"></script>
+    <script src="../static/js/custom.js"></script>
+
+
+    <script>
+      const counters = document.querySelectorAll('.value');
+        const speed = 200;
+
+counters.forEach( counter => {
+   const animate = () => {
+      const value = +counter.getAttribute('akhi');
+      const data = +counter.innerText;
+     
+      const time = value / speed;
+     if(data < value) {
+          counter.innerText = Math.ceil(data + time);
+          setTimeout(animate, 1);
+        }else{
+          counter.innerText = value;
+        }
+     
+   }
+   
+   animate();
+});
+
+
+
+    </script>
+    <script type="text/javascript" 
+    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+   </script>
+ <script type="text/javascript"> 
+  function googleTranslateElementInit() {
+ new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+ }
+</script>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+</body>
+</html>

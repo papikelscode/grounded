@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/assets/css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Standardcoinoption | News</title>
+    <style>
+        :root{
+    /* --primarycolor: #C7AF88; */
+    --primarycolor: #070d2b;
+
+}
+
+.preloader {
+        position:fixed;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+        background: white ; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        height: 100%;
+        z-index:99; /* makes sure it stays on top */
+    }
+    .loaded{
+        visibility: hidden;
+    }
+    
+
+    .progress__container{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 150px;
+        background-color: white;
+    }
+
+    .loadicon{
+        color: var(--primarycolor);
+    }
+
+    #progress_label{
+        color: var(--primarycolor);
+    }
+
+
+    .shownav{
+        display: block;
+    }
+
+    .is-activex{
+        display: block;
+    }
+    
+    </style>
+</head>
+<body>
+  
+    <div class="preloader" id="preloader">
+     
+        <div class="progress__container" >
+          <center>
+            <h4 id="progress_label">
+                <i style="color: darkgoldenrod;" class='bx bxl-bitcoin' ></i> <h2 id="bibasetext" class="title"><img width="555" src="../static/assets/imgs/illu/Bitcoin logo spinning.gif" alt=""></h2>
+            
+             </h4>
+            <progress id="progress" class="progress is-small" value="0" max="100">20%</progress>
+            
+          </center>
+        </div>
+      </div>   
+    
+    {% include "nav.html" %}
+
+  
+    <div class="card">
+        <div class="cryptohopper-web-widget" data-id="5"></div>
+        
+    </div>
+    <script src="https://www.cryptohopper.com/widgets/js/script"></script>
+    <script>
+        let LoadStatus = 0;
+
+window.addEventListener('load',function(){
+  var loader = document.getElementById('preloader')
+  loader.classList.add("loaded")
+  LoadStatus +=1
+
+});
+
+
+let progressBAr = document.getElementById("progress")
+let progression = 0;
+
+
+progress = setInterval(function() 
+{
+    if(progression == 100 || LoadStatus == 1) {
+        clearInterval(progress);
+    } else
+        progression += 1;
+        document.getElementById("progress_label").textContent = progression+"%"
+        progressBAr.value = progression;
+    
+}, 1000);  
+    </script>
+</body>
+</html>

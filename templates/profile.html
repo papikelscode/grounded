@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../statics/css/style.css">
+  <link rel="stylesheet" href="../statics/css/main.css">
+  <link rel="stylesheet" href="../statics/js/table/jstable.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <style>
+    /* #overlayer {
+  width:100%;
+  height:100%;  
+  position:fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  z-index: 2;
+  background:#4a4a4a;
+}
+.preloader p{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -45px;
+    width: 120px;
+    height: 90px;
+    
+    text-align: center;
+    color: black;
+    font-size: 24px;
+    z-index: 3;
+}
+.loader {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  z-index:3;
+  border: 4px solid #Fff;
+  top: 50%;
+  animation: loader 2s infinite ease;
+}
+.loader-inner {
+  vertical-align: top;
+  display: inline-block;
+  width: 100%;
+  background-color: #fff;
+  animation: loader-inner 2s infinite ease-in;
+}
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(180deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(180deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes loader-inner {
+  0% {
+    height: 0%;
+  }
+  25% {
+    height: 0%;
+  }
+  50% {
+    height: 100%;
+  }
+  75% {
+    height: 100%;
+  }
+  100% {
+    height: 0%;
+  }
+}
+@-webkit-keyframes loader-inner {
+  0% {
+    height: 0%;
+  }
+  25% {
+    height: 0%;
+  }
+  50% {
+    height: 100%;
+  }
+  75% {
+    height: 100%;
+  }
+  100% {
+    height: 0%;
+  }
+} */
+
+:root{
+    /* --primarycolor: #C7AF88; */
+    --primarycolor: #070d2b;
+
+}
+
+.preloader {
+        position:fixed;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+        background: white ; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        height: 100%;
+        z-index:99; /* makes sure it stays on top */
+    }
+    .loaded{
+        visibility: hidden;
+    }
+    
+
+    .progress__container{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 150px;
+        background-color: white;
+    }
+
+    .loadicon{
+        color: var(--primarycolor);
+    }
+
+    #progress_label{
+        color: var(--primarycolor);
+    }
+
+
+    .shownav{
+        display: block;
+    }
+
+    .is-activex{
+        display: block;
+    }
+    @keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+    #demo{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 50%;
+      background-color: #070d2b;
+      color: #fff;
+      animation: modalopen;
+      transform: translate(-50%, -50%);
+      width: 20%;
+      height: 3rem;
+      font-size: 25px;
+      margin-top: 3%;
+
+
+    }
+    .modal-card {
+      max-width: 800px;
+      width: 90%;
+    }
+
+    @media screen and (max-width: 768px) {
+      .modal-card {
+        width: 100%;
+      }
+    }
+    @media only screen and (max-width:640px){
+      #demo{
+        margin-bottom: -20%;
+        width: 60%;
+        height:4rem;
+      }
+      .title{
+    font-size: 15px;
+  }
+    }
+    
+  </style>
+  <title>Trade | CALL</title>
+  
+</head>
+  
+<body>
+
+
+   <!-- <div class="preloader" id="preloader">
+     
+    <div class="progress__container" >
+      <center>
+        <h4 id="progress_label">
+            <i style="color: darkgoldenrod;" class='bx bxl-bitcoin' ></i> <h2 id="bibasetext" class="title"><img width="555" src="../static/assets/imgs/illu/Bitcoin logo spinning.gif" alt=""></h2>
+        
+         </h4>
+        <progress id="progress" class="progress is-small" value="0" max="100">20%</progress>
+        
+      </center>
+    </div>
+  </div>    -->
+
+  <!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <style>
+    .sidebar {
+      background-color: blue;
+      height: 100vh;
+      padding: 1.5rem;
+     
+    }
+  .menu-list a {
+      color: whitesmoke;
+    }
+    .menu-label {
+      color: whitesmoke;
+      font-size: 30px;
+      font-weight: bold;
+    }
+
+    @media only screen and (max-width:640px){
+      .sidebar{
+        height: 60vh;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="columns">
+    <div class="column is-3">
+      <aside class="menu sidebar">
+        <p class="menu-label">
+          General
+        </p>
+        <ul class="menu-list">
+          <li><a href="#">Dashboard</a></li>
+          <li><a href="#">Profile</a></li>
+          <li><a href="#">Setting</a></li>
+          
+        </ul>
+        
+        
+        <p class="menu-label">
+          Transactions
+        </p>
+        <ul class="menu-list">
+          <li><a href="#" data-target="modal" aria-haspopup="true">Withdraw</a></li>
+          <li><a href="#">Deposit</a></li>
+          <li><a href="#">Transaction History</a></li>
+         
+        </ul>
+      </aside>
+    </div>
+    <div class="column is-9">
+        <section class="section">
+            <div class="container">
+              <h1 class="title">Edit Profile</h1>
+              <div class="columns">
+                <div class="column is-half">
+                  <form>
+                    <div class="field">
+                      <label class="label">Name</label>
+                      <div class="control">
+                        <input class="input" type="text" placeholder="Enter your name">
+                      </div>
+                    </div>
+                    <div class="field">
+                      <label class="label">Email</label>
+                      <div class="control">
+                        <input class="input" type="email" placeholder="Enter your email">
+                      </div>
+                    </div>
+                    <div class="field">
+                      <label class="label">Bio</label>
+                      <div class="control">
+                        <textarea class="textarea" placeholder="Enter your bio"></textarea>
+                      </div>
+                    </div>
+                    <div class="field is-grouped">
+                      <div class="control">
+                        <button class="button is-primary">Save</button>
+                      </div>
+                      <div class="control">
+                        <button class="button is-link">Cancel</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </section>
+  </div>
+ 
+
+
+
+<!-- TradingView Widget END -->
+                     
+
+      
+                      <script>
+                        function goToPage(url) {
+                          window.location.href = "bitcoinwithdrawl";
+                        }
+                        function goToPages(url) {
+                          window.location.href = "ethwallet";
+                        }
+                        function goToPagess(url) {
+                          window.location.href = "deposit";
+                        }
+                      </script>
+                   
+                      <script src="statics/js/table/jstable.min.js"></script>
+                      <script src="{{url_for("static",filename='assets/js/axios.min.js')}}"></script>
+                      <script src="statics/js/dashboard.js"></script>
+                      <script src="statics/js/custom.js"></script>
+                      <script>
+                        document.addEventListener('DOMContentLoaded', function () {
+                          const modalButton = document.querySelector('[data-target="modal"]');
+                          const modal = document.getElementById('modal');
+                          const modalCloseButtons = modal.querySelectorAll('.modal-close, .delete');
+                    
+                          modalButton.addEventListener('click', function () {
+                            modal.classList.add('is-active');
+                          });
+                    
+                          modalCloseButtons.forEach(function (button) {
+                            button.addEventListener('click', function () {
+                              modal.classList.remove('is-active');
+                            });
+                          });
+                        });
+                      </script>
+                     
+                    
+ </body>
+   </html>
